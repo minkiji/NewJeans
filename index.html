@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewJeans</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="src/js/script.js"></script>
+  <link rel="icon" href="src/img/nj-logo.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=south" />
+</head>
+
+<body>
+
+  <div class="section" id="section1">
+    <div class="web-logo">
+      <img src="src/img/nj-logo.png" alt="NewJeans Logo">
+    </div>
+
+    <div class="introduction">
+      <h1>NewJeans</h1>
+      <p>NewJeans is a South Korean girl group formed by ADOR, a sub-label of Hybe. The group is composed of five
+        members: Minji, Hanni, Danielle, Haerin, and Hyein. Mainly produced by Min Hee-jin, they are known for their
+        'girl next door' image and musical stylings reminiscent of the 1990s and 2000s.</p>
+      <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e8eaed">
+        <path d="M480-80 200-360l42-42 208 208v-686h60v686l208-208 42 42L480-80Z" />
+      </svg>
+    </div>
+  </div>
+
+  <div class="section profile-section" id="section2">
+    <div class="profile-menu">
+      <ul>
+        <li data-index="0" onclick="changeProfile(0)"><img style="object-position: right;" src="src/img/minji2.jpeg"
+            alt="Minji">
+        </li>
+        <li data-index="1" onclick="changeProfile(1)"><img src="src/img/hanni-icon.jpeg" alt="Hanni">
+        </li>
+        <li data-index="2" onclick="changeProfile(2)"><img src="src/img/danielle-icon1.jpeg" alt="Danielle">
+        </li>
+        <li data-index="3" onclick="changeProfile(3)"><img src="src/img/haerin-icon.jpeg" alt="Haerin">
+        </li>
+        <li data-index="4" onclick="changeProfile(4)"><img src="src/img/hyein-icon.jpeg" alt="Hyein">
+        </li>
+      </ul>
+    </div>
+
+    <div class="background" id="background"></div>
+    <div class="titles">
+      <h3>• Profiles</h3>
+    </div>
+    <div class="content" id="content">
+      <div class="idol-name">
+        <p style="font-family: 'Corleone'; font-size: 3.5rem;" id="intro"></p>
+        <h2 id="idol"></h2>
+      </div>
+      <h1 id="name"></h1>
+      <p id="description"></p>
+    </div>
+  </div>
+
+  <div class="section discography-section" id="section3">
+    
+  </div>
+
+  <div class="section video-section" id="section4">
+    <div class="videos" style="z-index: 99;">
+
+      <div class="titles">
+        <h3>• Vlogs</h3>
+      </div>
+      
+      <button class="previous" onclick="changeVideo(-1)">&#10094;</button>
+
+      <div class="video-container">
+        <iframe width="1080" height="620" src="https://www.youtube.com/embed/ir6ndUQ2pS4?si=3-GJlalowO_YT76R"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      
+      <button class="next" onclick="changeVideo(1)">&#10095;</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
