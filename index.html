@@ -36,7 +36,22 @@
     </div>
   </div>
 
-  <div class="section profile-section" id="section2">
+  <div class="section" id="section2">
+
+    <div class="background" id="background"></div>
+    
+    <div class="titles">
+      <h3>• Profiles</h3>
+    </div>
+    <div class="content" id="content">
+      <div class="idol-name">
+        <p style="font-family: 'Corleone'; font-size: 3.5rem;" id="intro"></p>
+        <h2 id="idol"></h2>
+      </div>
+      <h1 id="name"></h1>
+      <p id="description"></p>
+    </div>
+
     <div class="profile-menu">
       <ul>
         <li data-index="0" onclick="changeProfile(0)"><img style="object-position: right;" src="src/img/minji2.jpeg"
@@ -52,42 +67,33 @@
         </li>
       </ul>
     </div>
-
-    <div class="background" id="background"></div>
-    <div class="titles">
-      <h3>• Profiles</h3>
-    </div>
-    <div class="content" id="content">
-      <div class="idol-name">
-        <p style="font-family: 'Corleone'; font-size: 3.5rem;" id="intro"></p>
-        <h2 id="idol"></h2>
-      </div>
-      <h1 id="name"></h1>
-      <p id="description"></p>
-    </div>
-  </div>
-
-  <div class="section discography-section" id="section3">
     
   </div>
 
-  <div class="section video-section" id="section4">
-    <div class="videos" style="z-index: 99;">
+  <div class="section" id="section3">
+
+  </div>
+
+  <div class="section" id="section4">
+    <div class="videos">
 
       <div class="titles">
         <h3>• Vlogs</h3>
       </div>
-      
-      <button class="previous" onclick="changeVideo(-1)">&#10094;</button>
+
+      <button class="previous" onclick="changeVideo(-1)"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
 
       <div class="video-container">
-        <iframe width="1080" height="620" src="https://www.youtube.com/embed/ir6ndUQ2pS4?si=3-GJlalowO_YT76R"
+        <iframe width="1080" height="607" src="https://www.youtube.com/embed/ir6ndUQ2pS4?si=3-GJlalowO_YT76R"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      
-      <button class="next" onclick="changeVideo(1)">&#10095;</button>
+
+      <button class="next" onclick="changeVideo(1)"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+
+      <a href="https://www.youtube.com/@NewJeans_official" target="_blank"><button>More Videos</button></a>
+
     </div>
   </div>
 

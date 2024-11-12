@@ -23,6 +23,7 @@ document.addEventListener('wheel', function(event) {
 });
 
 
+
 // Data for each profile
 const profiles = [
   {
@@ -89,12 +90,26 @@ window.onload = function() {
 };
 
 
+
 const videos = [
   "https://www.youtube.com/embed/ir6ndUQ2pS4?si=3-GJlalowO_YT76R",
   "https://www.youtube.com/embed/bk50RC7XGlc?si=eYxn7PdrxoBHwCtm",
   "https://www.youtube.com/embed/tgrPTT7leyw?si=OL499BIIj02YLz19",
   "https://www.youtube.com/embed/pF7oJfQjaBs?si=ww0g_K5wI2e35YTJ",
-  "https://www.youtube.com/embed/8KT2buwnNtY?si=znTe9pL1RD5b0ncF"
+  "https://www.youtube.com/embed/gi79JJNptwY?si=y2FKmm3bOn_emRJ4",
+  "https://www.youtube.com/embed/8KT2buwnNtY?si=znTe9pL1RD5b0ncF",
+  "https://www.youtube.com/embed/JrSVBnMlcSs?si=USNHIyMFX-727VQB",
+  "https://www.youtube.com/embed/2rE4uldOSrw?si=pPmv0Y2QEG1fcd0P",
+  "https://www.youtube.com/embed/XVwbkHoqkIA?si=ufc-0QowUSViQsHQ",
+  "https://www.youtube.com/embed/N1yypxDSxpY?si=O8AwjA_CtYc4UH4X",
+  "https://www.youtube.com/embed/r40gM0BPVys?si=vu2I2CtBmRpLw6ad",
+  "https://www.youtube.com/embed/958bjfKWAD4?si=96wZ6MvnMDSt5h1G",
+  "https://www.youtube.com/embed/ptnDZPZliPo?si=PAh38rjRUpDML7S0",
+  "https://www.youtube.com/embed/ViGYz2uem3Q?si=hzJZ4li3o6mbxtkI",
+  "https://www.youtube.com/embed/E1Fgm3kmywM?si=dcMKFtQ-5SIkBhxC",
+  "https://www.youtube.com/embed/B2MwERJTFLQ?si=aAZXoErADKhwPbnm",
+  "https://www.youtube.com/embed/BxeFmWY8Rps?si=3IP5JEa9h6MI5erA",
+  "https://www.youtube.com/embed/HHXGpHqC0DM?si=jTJ1PrTZDH6npdGr"
 ];
 
 let currentVideoIndex = 0; // Start at the first video
@@ -106,7 +121,7 @@ function changeVideo(direction) {
   if (currentVideoIndex >= videos.length) currentVideoIndex = 0;
 
   const videoContainer = document.querySelector('.video-container');
-  videoContainer.innerHTML = `<iframe class="video" width="1080" height="620" src="${videos[currentVideoIndex]}"
+  videoContainer.innerHTML = `<iframe class="video" width="1080" height="607" src="${videos[currentVideoIndex]}"
   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 }
