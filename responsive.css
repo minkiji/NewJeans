@@ -216,7 +216,11 @@
 
   .button-container {
     width: 95%;
-    top: 570px;
+    top: 525px;
+  }
+
+  .introduction {
+    padding-top: 300px;
   }
 
   .introduction p {
@@ -240,7 +244,7 @@
   }
 
   .content {
-    padding-top: 350px;
+    padding-top: 300px;
   }
 
 
@@ -249,12 +253,12 @@
   }
 
   #description {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     max-width: 40ch;
   }
 
   .previous, .next {
-    bottom: 190px;
+    bottom: 80px;
   }
 
   .previous {
@@ -266,7 +270,7 @@
   }
 
   iframe {
-    width: 375px;
+    width: 350px;
     height: 350px;
   }
 }
