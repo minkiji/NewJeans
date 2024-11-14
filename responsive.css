@@ -201,18 +201,22 @@
 }
 
 @media (max-width: 430px) {
+  .items {
+    top: 45%;
+  }
+
   .items .item {
     width: 325px;
     height: 325px;
   }
 
   .carousel-container {
-    padding-top: 500px;
+    padding-top: 400px;
   }
 
   .button-container {
     width: 95%;
-    top: 690px;
+    top: 570px;
   }
 
   .introduction p {
@@ -234,6 +238,11 @@
     display: flex;
     gap: 20px;
   }
+
+  .content {
+    padding-top: 350px;
+  }
+
 
   #name {
     font-size: 3rem;
@@ -276,7 +285,7 @@
   }
 
   .carousel-container {
-    padding-top: 480px;
+    padding-top: 400px;
   }
 
   .carousel-caption {
@@ -285,7 +294,7 @@
 
   .button-container {
     width: 95%;
-    top: 545px;
+    top: 570px;
   }
 
   .introduction {
@@ -324,14 +333,7 @@
 @media (max-width: 360px) {
   .button-container {
     width: 95%;
-    top: 580px;
-  }
-}
-
-@media (max-width: 344px) {
-  .button-container {
-    width: 95%;
-    top: 660px;
+    top: 575px;
   }
 }
 
