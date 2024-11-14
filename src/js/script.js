@@ -108,8 +108,7 @@ const videos = [
   "https://www.youtube.com/embed/ViGYz2uem3Q?si=hzJZ4li3o6mbxtkI",
   "https://www.youtube.com/embed/E1Fgm3kmywM?si=dcMKFtQ-5SIkBhxC",
   "https://www.youtube.com/embed/B2MwERJTFLQ?si=aAZXoErADKhwPbnm",
-  "https://www.youtube.com/embed/BxeFmWY8Rps?si=3IP5JEa9h6MI5erA",
-  "https://www.youtube.com/embed/HHXGpHqC0DM?si=jTJ1PrTZDH6npdGr"
+  "https://www.youtube.com/embed/BxeFmWY8Rps?si=3IP5JEa9h6MI5erA"
 ];
 
 let currentVideoIndex = 0; // Start at the first video
@@ -125,3 +124,60 @@ function changeVideo(direction) {
   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 }
+
+
+
+const slider = document.querySelector(".items");
+const slides = document.querySelectorAll(".item");
+const button = document.querySelectorAll(".button");
+const title = document.querySelector(".carousel-title");
+const caption = document.querySelector(".carousel-caption");
+
+// Array of captions for each image
+const captions = [
+  { title: "Newjeans 1st EP", caption: "Albumㅤ•ㅤ2022ㅤ•ㅤ4 Songs" },
+  { title: "Ditto", caption: "Singleㅤ•ㅤ2022ㅤ•ㅤ1 Song" },
+  { title: "OMG", caption: "Singleㅤ•ㅤ2023ㅤ•ㅤ2 Songs" },
+  { title: "Tell me", caption: "Trackㅤ•ㅤ2023ㅤ•ㅤ1 Song" },
+  { title: "NewJeans 'SuperShy'", caption: "Singleㅤ•ㅤ2023ㅤ•ㅤ2 Songs" },
+  { title: "Get Up", caption: "EPㅤ•ㅤ2023ㅤ•ㅤ6 Songs" },
+  { title: "NJWMX", caption: "Albumㅤ•ㅤ2023ㅤ•ㅤ12 Songs" },
+  { title: "How Sweet", caption: "EPㅤ•ㅤ2024•ㅤ4 Songs" },
+  { title: "Super Natural", caption: "EPㅤ•ㅤ2024ㅤ•ㅤ4 Songs" }
+];
+
+let current = 0;
+let prev = slides.length - 1;
+let next = 1;
+
+// Add event listeners for the buttons
+for (let i = 0; i < button.length; i++) {
+  button[i].addEventListener("click", () => (i == 0 ? gotoPrev() : gotoNext()));
+}
+
+// Function to go to the previous item
+const gotoPrev = () => gotoNum(current > 0 ? current - 1 : slides.length - 1);
+
+// Function to go to the next item
+const gotoNext = () => gotoNum(current < slides.length - 1 ? current + 1 : 0);
+
+// Function to go to a specific item
+const gotoNum = (number) => {
+  current = number;
+  prev = (current - 1 + slides.length) % slides.length;
+  next = (current + 1) % slides.length;
+
+  // Remove all classes from slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active", "prev", "next");
+  }
+
+  // Add classes to the current, previous, and next slides
+  slides[current].classList.add("active");
+  slides[prev].classList.add("prev");
+  slides[next].classList.add("next");
+
+  // Update the title and caption text
+  title.innerText = captions[current].title;
+  caption.innerText = captions[current].caption;
+};
