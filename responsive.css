@@ -302,7 +302,7 @@
   }
 
   .introduction {
-    padding-top: 280px;
+    padding-top: 250px;
   }
 
   .introduction p {
@@ -331,13 +331,6 @@
 
   iframe {
     width: 350px;
-  }
-}
-
-@media (max-width: 360px) {
-  .button-container {
-    width: 95%;
-    top: 575px;
   }
 }
 
