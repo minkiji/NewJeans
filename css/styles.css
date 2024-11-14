@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: 'Corleone';
-  src: url(src/fonts/Corleone\ -\ Demo.otf);
+  src: url(/src/fonts/Corleone\ -\ Demo.otf);
 }
 
 body {
@@ -373,16 +373,16 @@ p {
 /*---------------------- ID's -----------------------*/
 
 #section1 {
-  background-image: url("src/img/newjeans.jpg");
+  background-image: url("/src/img/newjeans.jpg");
   background-position: 50% 100%;
 }
 
 #section3 {
-  background-image: url("src/img/video-background1.png");
+  background-image: url("/src/img/video-background1.png");
   background-position: 50% 100%;
 }
 
 #section4 {
-  background-image: url(src/img/discography-background.png);
+  background-image: url(/src/img/discography-background.png);
   background-position: 50% 100%;
 }
