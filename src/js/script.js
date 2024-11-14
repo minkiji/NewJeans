@@ -1,4 +1,5 @@
 let isScrolling = false;
+let startY = 0;
 
 document.addEventListener('wheel', function(event) {
   if (isScrolling) return;
@@ -16,11 +17,41 @@ document.addEventListener('wheel', function(event) {
     sections[currentSectionIndex - 1].scrollIntoView({ behavior: 'smooth' });
   }
 
-  // Allow scrolling again after a delay
   setTimeout(() => {
     isScrolling = false;
   }, 750);
 });
+
+// Touch events for mobile scrolling
+document.addEventListener('touchstart', function(event) {
+  startY = event.touches[0].clientY;
+});
+
+document.addEventListener('touchend', function(event) {
+  if (isScrolling) return;
+
+  const endY = event.changedTouches[0].clientY;
+  const sections = document.querySelectorAll('.section');
+  let currentSectionIndex = Array.from(sections).findIndex(section =>
+    section.getBoundingClientRect().top === 0
+  );
+
+  if (startY > endY && currentSectionIndex < sections.length - 1) {
+
+    isScrolling = true;
+    sections[currentSectionIndex + 1].scrollIntoView({ behavior: 'smooth' });
+  } else if (startY < endY && currentSectionIndex > 0) {
+
+    isScrolling = true;
+    sections[currentSectionIndex - 1].scrollIntoView({ behavior: 'smooth' });
+  }
+
+
+  setTimeout(() => {
+    isScrolling = false;
+  }, 750);
+});
+
 
 
 
